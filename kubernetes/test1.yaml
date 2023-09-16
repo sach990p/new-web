@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: star-web
+  name: sach
   namespace: default
   labels:
-    app: star-web
+    app: sach
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: star-web
+      app: sach
   template:
     metadata:
       labels:
-        app: star-web
+        app: sach
     spec:
       containers:
       - name: star-web
-        image: kanha.azurecr.io/star-web:latest
+        image: ramacr2.azurecr.io/sach:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
