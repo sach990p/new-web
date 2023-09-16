@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: star-web
+  namespace: default
+  labels:
+    app: star-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: star-web
+  template:
+    metadata:
+      labels:
+        app: star-web
+    spec:
+      containers:
+      - name: star-web
+        image: kanha.azurecr.io/star-web:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
