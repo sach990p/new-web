@@ -1,0 +1,197 @@
+html, body, h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+h1 img {
+	display: block;
+}
+img {
+	border: 0;
+}
+a {
+	color: #8F6A2B;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	color: #C4861C;
+	text-decoration: underline;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.more {
+	text-align: right;
+}
+.clear {
+	clear: both;
+}
+body {
+	background: url(images/bg.jpg) repeat-x;
+	text-align: center;
+	font: 11px arial, sans-serif;
+	color: #5D5D5D;
+}
+#wrapper {
+	text-align: left;
+	margin: auto;
+	width: 686px;
+	position: relative;
+}
+
+h1 {
+	position: absolute;
+	background: url(images/header.jpg) no-repeat;
+	width: 259px;
+	height: 204px;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 35px;
+	color: white;
+	font: 32px "Lucida Handwriting", "Lucida Calligraphy", verdana, arial, sans-serif;
+}
+#family {
+	position: absolute;
+	background: url(images/myfamily.jpg) no-repeat;
+	width: 383px;
+	height: 381px;
+	top: 204px;
+	left: -59px;
+	z-index: 1;
+}
+#nav {
+	width: 259px;
+	position: absolute;
+	top: 585px;
+	left: 0;
+	background: url(images/nav_bg.jpg) repeat-y;
+}
+#nav ul {
+	margin: 0;
+	padding: 37px 0 45px 64px;
+	font: 12px "Times new roman", "Lucida Grande", serif;
+	background: bottom left url(images/nav_bot.gif) no-repeat;
+}
+#nav li {
+	margin: 11px;
+	padding: 0 0 0 40px;
+	list-style: none;
+	background: top left url(images/bullet_white.gif) no-repeat;
+}
+#nav a {
+	font-weight: normal;
+	color: white;
+}
+
+#body {
+	position: absolute;
+	width: 427px;
+	top: 0;
+	left: 259px;
+	background: white;
+	overflow: hidden;
+}
+#body .i {
+	padding: 69px 45px 84px 74px;
+}
+#head-top {
+	position: absolute;
+	top: 0;
+	left: 259px;
+	width: 427px;
+	height: 32px;
+	z-index: 2;
+	background: url(images/head_top.gif) no-repeat;
+}
+#head-right {
+	position: absolute;
+	top: 0;
+	left: 686px;
+	width: 13px;
+	height: 145px;
+	z-index: 3;
+	background: url(images/head_right.gif) no-repeat;
+}
+#body h2 {
+	font: 14px "Times new roman", "Lucida Grande", serif;
+	font-weight: normal;
+	margin-top: 25px;
+}
+#body h2.shallow {
+	margin-top: 10px;
+}
+#body h2 strong {
+	color: #576B02;
+	font-size: 20px;
+	font-weight: normal;
+}
+#body h2.orange strong {
+	color: #8F6A2B;
+}
+#body p {
+	margin: 1em 0;
+}
+#body ul {
+	margin: 0;
+	padding: 0;
+}
+#body li {
+	margin: 1em 0;
+	list-style: none;
+	padding: 0 0 0 30px;
+	background: top left url(images/bullet_orange.gif) no-repeat;
+}
+#view {
+	float: left;
+	width: 115px;
+	text-align: center;
+	margin-right: -50px;
+}
+#funtravel {
+	margin-top: 10px;
+}
+#collect {
+	float: left;
+	width: 203px;
+}
+#collect p.dark, #view p.dark {
+	text-align: center;
+	color: #000;
+	font: 14px "Arial narrow", arial, sans-serif;
+	margin-bottom: 2px;
+	margin-top: 3px;
+}
+#collect p.orange, #view p.orange {
+	text-align: center;
+	color: #F25C00;
+	font: 22px "Arial narrow", arial, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 10px;
+}
+#view p.dark {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+#view p.dark a {
+	color: #000;
+	font-weight: normal;
+	text-decoration: none;
+}
+#view p.orange a {
+	color: #F25C00;
+	font-weight: normal;
+	text-decoration: none;
+}
+#collect p.other {
+	margin-left: 12px;
+}
+#copyright {
+	text-align: center;
+	clear: both;
+	color: black;
+	padding-top: 15px;
+}
