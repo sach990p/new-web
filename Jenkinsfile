@@ -16,7 +16,7 @@ stages {
                     extensions: [],
                     userRemoteConfigs: [[
                         credentialsId: "${env.GIT_CREDENTIALS_ID}",
-                        url: 'https://your-terraform-repo-url'
+                        url: 'https://github.com/sach990p/new-web-01.git'
                     ]]
                 ])
             }
