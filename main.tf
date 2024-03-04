@@ -90,5 +90,50 @@ resource "azurerm_linux_virtual_machine" "vm" {
     sku       = "20.04"
     version   = "latest"
   }
+
+    # Add the connection block
+  connection {
+    type     = "ssh"
+    user     = "adminuser"
+    private_key = file("~/.ssh/id_rsa")
+    host     = azurerm_public_ip.publicip.ip_address
+  }
+
+  # Add provisioners for scripts
+  provisioner "file" {
+    source      = "install_docker.sh"
+    destination = "/tmp/install_docker.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/install_docker.sh",
+      "sudo /tmp/install_docker.sh",
+    ]
+  }
+
+  provisioner "file" {
+    source      = "fetch_and_build.sh"
+    destination = "/tmp/fetch_and_build.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/fetch_and_build.sh",
+      "sudo /tmp/fetch_and_build.sh",
+    ]
+  }
+
+  provisioner "file" {
+    source      = "run_container.sh"
+    destination = "/tmp/run_container.sh"
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/run_container.sh",
+      "sudo /tmp/run_container.sh",
+    ]
+  }
 }
 
