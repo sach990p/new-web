@@ -10,8 +10,6 @@ pipeline {
         stage('Provision VM with Terraform') {
             steps {
                 script {
-                    // Checkout Terraform scripts from your repository
-                    git credentialsId: "GIT_CREDENTIALS_ID", url: 'https://github.com/sach990p/new-web-01.git'
                     // Execute Terraform init and apply
                     sh 'terraform init'
                     sh 'terraform apply -auto-approve'
