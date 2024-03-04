@@ -15,7 +15,7 @@ stages {
                     branches: [[name: '*/main']], // Adjust branch if necessary
                     extensions: [],
                     userRemoteConfigs: [[
-                        credentialsId: "GIT_CREDENTIALS_ID",
+                        default: "GIT_CREDENTIALS_ID",
                         url: 'https://github.com/sach990p/new-web-01.git'
                     ]]
                 ])
