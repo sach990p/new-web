@@ -6,14 +6,19 @@ pipeline {
         DOCKER_HUB_CREDENTIALS_ID = 'DOCKER_HUB_CREDENTIALS_ID'
         GIT_CREDENTIALS_ID = 'GIT_CREDENTIALS_ID'
     }
-    stages {
-        stage('Provision VM with Terraform') {
+stages {
+        stage('Checkout') {
             steps {
-                script {
-                    // Execute Terraform init and apply
-                    sh 'terraform init'
-                    sh 'terraform apply -auto-approve'
-                }
+                // Checkout your Terraform scripts from your repository
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']], // Adjust branch if necessary
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        credentialsId: "${env.GIT_CREDENTIALS_ID}",
+                        url: 'https://your-terraform-repo-url'
+                    ]]
+                ])
             }
         }
         stage('Install Docker and Dependencies') {
